@@ -29,6 +29,9 @@ a {
 // Welcome styling
 .welcome-area {
     min-height: 100vmin;
+    background-image: url('/assets/background/Simple-Shiny.svg'); // rgba(223, 133, 133, 1)
+    // background-image: url('/assets/background/Sprinkle_dark_tmp.svg'); bg = rgba(85, 82, 82, 1) lines = #DBDBDB
+    // https://bgjar.com/
 }
 
 .landing {
@@ -43,35 +46,67 @@ a {
 }
 
 .name-text {
-    grid-column: 1 / 7;
+    grid-column: 1 / 9;
     grid-row: 2;
     display: flex;
-    justify-content: center;
-    display: block;
+    margin-bottom: 12rem;
+    flex-direction: column;
 
     .name {
         display: flex;
         justify-content: center;
         p {
-            font-size: 5rem;
-            color: plum;
+            font-family: 'Rubik', sans-serif;
+            font-weight: 600;
+            font-size: 8rem;
+            color: white;
         }
     }
     .name-role {        
         display: flex;
         justify-content: center;
         p {
+            font-family: 'Rubik', sans-serif;
+            font-weight: 400;
             font-size: 2rem;
-            color: black;
+            color: whitesmoke;
         }
     }
 }
 
+/*
+.latest-info {
+    grid-column: 1 / 6;
+    grid-row: 3;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: space-around;
+    .latest-job {
+        display: flex;
+        background-color: #F9FAFB;
+        padding: 8rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    } .latest-project {
+        display: flex;
+        background-color: #F9FAFB;
+        padding: 8rem;
+        border-radius: 1rem;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+}
+*/
 .links {
-    grid-column: 7 / 13;
+    grid-column: 9 / 11;
     grid-row: 2;
     display: flex;
     justify-content: center;
+    background-color: #F9FAFB;
+    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .linkedin {
@@ -88,9 +123,17 @@ a {
     grid-row: 3;
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
+    div p {
+        font-family: 'Rubik', sans-serif;
+        font-weight: 400;
+        color: white;
+        font-size: 1.2rem;
+    }
 }
 
 .arrow-wrapper {
     display: flex;
     justify-content: center;
+    padding-top: 0.25rem;
 }
