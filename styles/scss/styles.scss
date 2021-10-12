@@ -30,8 +30,6 @@ a {
 .welcome-area {
     min-height: 100vmin;
     background-image: url('/assets/background/Simple-Shiny.svg'); // rgba(223, 133, 133, 1)
-    // background-image: url('/assets/background/Sprinkle_dark_tmp.svg'); bg = rgba(85, 82, 82, 1) lines = #DBDBDB
-    // https://bgjar.com/
 }
 
 .landing {
@@ -102,21 +100,26 @@ a {
     grid-row: 2;
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: #F9FAFB;
     padding: 1.5rem 0.5rem 1.5rem 0.5rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 
-.linkedin {
+.github {
     margin: 0 2rem 0 2rem;
 }
+
 
 .mail {
     margin: 0 2rem 0 2rem;
 }
 
+.social:hover {
+    transform: scale(1.15, 1.15);
+    transition-duration: 0.2s;
+}
 
 .see-more {
     grid-column: 6 / 8;
