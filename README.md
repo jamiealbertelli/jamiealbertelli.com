@@ -1,3 +1,7 @@
-Sass command
+# Personal Website
 
-sass styles/scss/styles.scss styles/css/styles.css --style=compressed --watch
+[jamiealbertelli.com](https://www.jamiealbertelli.com)
+
+Simple website displaying my contact info and CV.
+
+Built using HTML and CSS (SCSS).
