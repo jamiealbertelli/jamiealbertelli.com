@@ -1,5 +1,4 @@
 @use "navbar";
-@use "media-queries";
 
 body {
     line-height: 1.5;
@@ -28,34 +27,35 @@ a {
 
 // Welcome styling
 .welcome-area {
-    min-height: 100vmin;
+    //min-height: 100vmin;
     background-image: url("/assets/background/Simple-Shiny.svg"); // rgba(223, 133, 133, 1)
 }
 
+// Mobile First < 575px
 .landing {
     padding-top: 4.8rem;
     display: grid;
     grid-gap: 10px;
-    max-height: 100vh;
-    grid-template-rows: 2fr 2fr 0.5fr;
-    //grid-template-rows: 0.5fr 10fr 2fr;
-    grid-template-columns: repeat(12, 1fr);
+    height: 100vh;
+    grid-template-rows: 2fr 2fr 2fr 0.5fr;
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
 }
 
 .name-text {
-    grid-column: 3 / -1;
+    grid-column: 1 / -1;
     grid-row: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     .name {
         display: flex;
-        justify-content: start;
+        justify-content: center;
         p {
             font-family: "Rubik", sans-serif;
             font-weight: 600;
-            font-size: 8rem;
+            font-size: 2.8rem;
             color: white;
         }
     }
@@ -65,7 +65,7 @@ a {
         p {
             font-family: "Rubik", sans-serif;
             font-weight: 400;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: whitesmoke;
         }
     }
@@ -73,26 +73,33 @@ a {
 
 .cv-dl {
     display: flex;
-    grid-column: 3/ 5;
-    grid-row: 2;
-
+    grid-column: 1 / -1;
+    grid-row: 3;
+    justify-content: center;
     .cv-button {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         background-color: #f9fafb;
-        color: black;
-        padding: 2rem 2rem;
+        border: none;
+        padding: 1rem 1rem;
         border-radius: 1rem;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        a {
+            color: black;
+        }
+        .cv-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
         .dl-svg {
             height: 4rem;
         }
         p {
             font-family: "Rubik", sans-serif;
             font-weight: 400;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 0.75rem;
         }
     } .cv-button:hover {
@@ -102,23 +109,27 @@ a {
 }
 
 .links {
-    grid-column: 8 / 10;
+    grid-column: 1 / -1;
     grid-row: 2;
     display: flex;
-    justify-content: center;
+    margin: 0 1rem 0 1rem;
+    justify-content: space-around;
     align-items: center;
     background-color: #f9fafb;
-    padding: 1.5rem 0.5rem 1.5rem 0.5rem;
+    padding: 2rem 0rem 2rem 0rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.github {
-    margin: 0 2rem 0 2rem;
+.github-svg {
+    height: 4rem;
 }
 
-.mail {
-    margin: 0 2rem 0 2rem;
+.linkedin-svg {
+    height: 4rem;
+}
+
+.mail-svg {
+    height: 4.5rem;
 }
 
 .social:hover {
@@ -127,8 +138,8 @@ a {
 }
 
 .see-more {
-    grid-column: 6 / 8;
-    grid-row: 3;
+    grid-column: 1 / -1;
+    grid-row: 4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,3 +160,180 @@ a {
     padding-top: 0.25rem;
 }
 */
+
+// SM ≥ 576px
+@media screen and (min-width: 576px) {
+    .landing {
+        grid-template-columns: repeat(8, 1fr);
+    }
+    
+    .name-text {
+        .name {
+            p {
+                font-size: 4rem;
+            }
+        }
+        .name-role {
+            p {
+                font-size: 1.75rem;
+                font-weight: 400;
+            }
+        }
+    }
+    
+    .cv-dl {
+        .cv-button {
+            .cv-text {
+                font-size: 1.25rem;
+            }
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+    
+    .links {
+        grid-column: 2 / 8;
+    }
+}
+
+// MD ≥ 768px
+@media screen and (min-width: 768px) {
+    .name-text {
+        .name {
+            p {
+                font-size: 4.5rem;
+            }
+        }
+        .name-role {
+            p {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    .cv-dl {
+        grid-column: 4 / 6;
+        .cv-button {
+            .cv-text {
+                font-size: 1.25rem;
+            }
+        }
+    }
+    
+    .links {
+        grid-column: 2 / 8;
+    }    
+}
+// LG ≥ 992px
+@media screen and (min-width: 992px) {
+    .links {
+        grid-column: 3 / 7;
+    }
+
+}
+// XL ≥ 1200px
+@media screen and (min-width: 1200px) {
+    .landing {
+        grid-template-rows: 2fr 2fr 0.5fr;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    .name-text {
+        grid-column: 2 / -1;
+        .name {
+            justify-content: start;
+            p {
+                font-size: 7rem;
+            }
+        }
+        .name-role {
+            p {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    .links {
+        grid-column: 7 / 11;
+        grid-row: 2;
+        padding: 2rem 0.5rem 2rem 0.5rem;
+    }
+
+    .cv-dl {
+        grid-column: 3 / 5;
+        grid-row: 2;
+
+        .cv-button {
+            padding: 1rem 1rem;
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+}
+
+// XXL ≥1400px
+@media screen and (min-width: 1400px) {
+    .name-text {
+        grid-column: 3 / -1;
+        .name {
+            justify-content: start;
+            p {
+                font-size: 8rem;
+            }
+        }
+        .name-role {
+            p {
+                font-size: 3rem;
+            }
+        }
+    }
+
+    .cv-dl {
+        grid-column: 3 / 5;
+        grid-row: 2;
+
+        .cv-button {
+            padding: 2rem 2rem;
+            p {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .links {
+        grid-column: 8 / 12;
+        grid-row: 2;
+        padding: 2rem 0.5rem 2rem 0.5rem;
+    }
+
+    .github-svg {
+        height: 5rem;
+    }
+    
+    .linkedin-svg {
+        height: 5rem;
+    }
+    
+    .mail-svg {
+        height: 6.5rem;
+    }
+
+    .see-more {
+        grid-column: 6 / 8;
+        grid-row: 3;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+
+    .links {
+        grid-column: 7 / 11;
+        grid-row: 2;
+        padding: 2rem 0.5rem 2rem 0.5rem;
+    }
+
+    .cv-button p {
+            font-size: 1.5rem;
+        }
+}
