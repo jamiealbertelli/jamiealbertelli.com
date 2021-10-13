@@ -1,9 +1,0 @@
-/* TEAM */
-Developer: Jamie Albertelli
-Contact: me@jamiealbertelli.com
-Location: London, UK
-
-/* SITE */
-
-Last update: 2021/09/29
-Standards: HTML5, CSS3
