@@ -71,43 +71,6 @@ a {
     }
 }
 
-.cv-dl {
-    display: flex;
-    grid-column: 1 / -1;
-    grid-row: 3;
-    justify-content: center;
-    .cv-button {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background-color: #f9fafb;
-        border: none;
-        padding: 1rem 1rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        a {
-            color: black;
-        }
-        .cv-text {
-            font-size: 1.5rem;
-            font-weight: 600;
-        }
-        .dl-svg {
-            height: 4rem;
-        }
-        p {
-            font-family: "Rubik", sans-serif;
-            font-weight: 400;
-            font-size: 1.1rem;
-            margin-bottom: 0.75rem;
-        }
-    } .cv-button:hover {
-        transform: scale(1.1, 1.1);
-        transition-duration: 0.25s;
-    }
-}
-
 .links {
     grid-column: 1 / -1;
     grid-row: 2;
@@ -133,7 +96,7 @@ a {
 }
 
 .social:hover {
-    transform: scale(1.15, 1.15);
+    transform: scale(1.02, 1.02);
     transition-duration: 0.2s;
 }
 
@@ -181,17 +144,6 @@ a {
         }
     }
     
-    .cv-dl {
-        .cv-button {
-            .cv-text {
-                font-size: 1.25rem;
-            }
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-    
     .links {
         grid-column: 2 / 8;
     }
@@ -211,16 +163,7 @@ a {
             }
         }
     }
-    
-    .cv-dl {
-        grid-column: 4 / 6;
-        .cv-button {
-            .cv-text {
-                font-size: 1.25rem;
-            }
-        }
-    }
-    
+
     .links {
         grid-column: 2 / 8;
     }    
@@ -228,7 +171,7 @@ a {
 // LG ≥ 992px
 @media screen and (min-width: 992px) {
     .links {
-        grid-column: 3 / 7;
+        grid-column: 2 / 8;
     }
 
 }
@@ -253,23 +196,10 @@ a {
         }
     }
     .links {
-        grid-column: 7 / 11;
+        grid-column: 4 / 10;
         grid-row: 2;
         padding: 2rem 0.5rem 2rem 0.5rem;
     }
-
-    .cv-dl {
-        grid-column: 3 / 5;
-        grid-row: 2;
-
-        .cv-button {
-            padding: 1rem 1rem;
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
 }
 
 // XXL ≥1400px
@@ -289,20 +219,8 @@ a {
         }
     }
 
-    .cv-dl {
-        grid-column: 3 / 5;
-        grid-row: 2;
-
-        .cv-button {
-            padding: 2rem 2rem;
-            p {
-                font-size: 1.2rem;
-            }
-        }
-    }
-
     .links {
-        grid-column: 8 / 12;
+        grid-column: 4 / 10;
         grid-row: 2;
         padding: 2rem 0.5rem 2rem 0.5rem;
     }
@@ -328,12 +246,8 @@ a {
 @media screen and (min-width: 1600px) {
 
     .links {
-        grid-column: 7 / 11;
+        grid-column: 5 / 9;
         grid-row: 2;
         padding: 2rem 0.5rem 2rem 0.5rem;
     }
-
-    .cv-button p {
-            font-size: 1.5rem;
-        }
 }
